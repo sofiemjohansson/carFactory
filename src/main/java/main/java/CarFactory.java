@@ -37,5 +37,4 @@ public class CarFactory {
             default: {
                 throw new CarException("Not a valid brand");
             }
-        }
         }}
