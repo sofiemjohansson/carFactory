@@ -17,9 +17,14 @@ public class CarFactoryTest {
         assertNotNull(car);
     }
 
+    public void test_get_car_brand_success() throws CarException { assertEquals("Volvo", carFactory.getCar("Yellow").getBrand()); }
 
     @Test
-    public void test_get_volvo_car_brand_success() throws CarException { assertEquals("Volvo", carFactory.getCar("Volvo").getBrand()); }
+    public void test_get_car_brand_fail() throws CarException{
+        CarException carException = assertThrows(CarException.class, () -> carFactory.getCar("Black"));
+        assertEquals("Not a valid brand", carException.getMessage());
+    }
+
 
     @Test
     public void test_get_car_color_success() throws CarException {
