@@ -14,6 +14,7 @@ public class CarFactory {
             int index = (int) (Letters.length() * Math.random());
             lettersSb.append(Letters.charAt(index));
         }
+
             for (int i = 0; i < 3; i++) {
                 int index = (int)(numbers.length() * Math.random());
                 numSb.append(numbers.charAt(index));
@@ -26,7 +27,7 @@ public class CarFactory {
 
 
     public Car getCar(String color) throws CarException {
-        switch(brands[0]) {
+        switch (brands[0]) {
             case "Nissan": {
                 Car nissan = new Car(color);
                 nissan.setRegNumber(swedishRegistrationPlate());
