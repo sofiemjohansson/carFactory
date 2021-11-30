@@ -5,7 +5,7 @@ package main.java;
 public class Nissan implements Car {
 
     String color;
-    String brand = "Opel";
+    String brand = "Nissan";
     String regNumber;
     String engine;
 
