@@ -7,6 +7,7 @@ public class Nissan implements Car {
     String color;
     String brand = "Opel";
     String regNumber;
+    String engine;
 
     public Nissan(String color) {
         this.color = color;
@@ -27,7 +28,10 @@ public class Nissan implements Car {
     public String getRegistrationNumber() {
         return regNumber;
     }
-
+    @Override
+    public String getEngine() {
+        return engine;
+    }
     public String setRegistrationNumber() {
         return this.regNumber = RegNumberGenerator.getAlphaNumericString(6);
     }

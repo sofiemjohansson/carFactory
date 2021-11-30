@@ -5,7 +5,7 @@ public class CarFactory {
         if(brand == null) {
             return null;
         }
-        if(brand == "Opel") {
+        if(brand == "Nissan") {
             Nissan nissan = new Nissan("Red");
             System.out.println(nissan.getRegistrationNumber());
             return nissan;
