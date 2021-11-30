@@ -1,7 +1,7 @@
 package main.java;
 
 public class CarFactory {
-    private String[] brands = {"Volvo", "Nissan"};
+    private String[] brands = {"Volvo", "Nissan", "S"};
     private String[] engines = {"Engine1", "Engine2"};
 
     private String getAlphaNumericString() {
@@ -17,7 +17,7 @@ public class CarFactory {
     }
 
     public Car getCar(String color) throws CarException {
-        switch(brands[0]) {
+        switch (brands[0]) {
             case "Nissan": {
                 Car nissan = new Car(color);
                 nissan.setRegNumber(getAlphaNumericString());
@@ -38,4 +38,4 @@ public class CarFactory {
                 throw new CarException("Not a valid brand");
             }
         }
-        }}
+    }}
